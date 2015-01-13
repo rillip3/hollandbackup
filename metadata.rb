@@ -10,7 +10,9 @@ version          "0.1.0"
   supports os
 end
 
-depends "cron", "mysql"
+%w{cron mysql}.each do [cb]
+  depends cb
+end
 
 recipe "hollandbackup", "Adds the Holland Backup repository."
 recipe "hollandbackup::repository", "Adds the Holland Backup repository."

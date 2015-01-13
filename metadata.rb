@@ -10,9 +10,7 @@ version          "0.1.0"
   supports os
 end
 
-recommends "mysql"
-
-depends "cron"
+depends "cron", "mysql"
 
 recipe "hollandbackup", "Adds the Holland Backup repository."
 recipe "hollandbackup::repository", "Adds the Holland Backup repository."
